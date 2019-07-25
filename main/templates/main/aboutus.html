@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Healing Wheel</title>
+</head>
+
+<style>
+		.sidenav {
+			height:100%;
+			width: 0;
+			z-index:1;
+      position:fixed;
+			top: 0;
+			right:0;
+			background-color: rgb(255,255,255);
+			overflow-x: hidden;
+			transition:0.5s ease-out;
+			padding-top: 60px;
+		}
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 15px;
+      font-weight: bold;
+			color: #0489B1;
+			display: block;
+			transition: 0.2s ease-in-out;
+		}
+		.sidenav a:hover, .offcanvas a:focus {
+			color: #000;
+		}
+		.closebtn {
+			position: absolute;
+			top: 11px;
+			left:0;
+			font-size: 36px ;
+		}
+		.openmenu:hover {
+			transition:0.5s ease-in-out;
+      filter:brightness(40%);
+		}
+		.openmenu {
+			font-size: 25px;
+			cursor:pointer;
+			transition:0.5s ease-in-out;
+      float:right;
+      padding-right: 40px;
+      padding-top:20px;
+      z-index : 1;
+		}
+		.openmenu > i {
+			font-size: 30px;
+		}
+		@media screen and (max-height:450px) {
+			.sidenav {
+				padding-top:15px;
+			}
+			.sidenav a {
+				font-size: 18px;
+			}
+		}
+    .mysidenav{
+      float:right;
+    }
+    .kickboard:hover{
+      transform:rotate(360deg);
+      transition:2.0s ease-out;
+    }
+
+	</style>
+  <script>
+		function openNav() {
+      document.getElementById('mysidenav').style.width = '200px';
+      document.getElementById('mysidenav').style.boxShadow = ' rgba(0,0,0,0.5) 0 0 0 9999px';
+
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+      document.getElementById('mysidenav').style.boxShadow = ' rgba(255,255,255,0) 0 0 0 9999px';
+		}
+
+	</script>
+
+<br>
+<center><a href="home.html"><img src="logo.png" height = "100" style = "position:relative"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src="menu_open.png" height = "23"></span></center>
+<body>
+  <div id="mysidenav" class="sidenav" >
+  		<a href="#" class="closebtn" onclick='closeNav(); '>x</a>
+      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="profile.png" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+      <br>
+      <a href="aboutus.html">About us</a>
+  		<a href="#">이용 방법</a>
+  		<a href="loc&rent.html">킥보드 위치 및 대여</a>
+  		<a href="#">충전하기</a>
+  		<a href="#">Contact</a>
+  	</div>
+    <br>
+    <br>
+    <center><img src="aboutus(1).png" height = "500px" ></center>
+
+</body>
+</html>

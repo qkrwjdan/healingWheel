@@ -9,6 +9,8 @@
   <title>Healing Wheel</title>
 </head>
 
+{% block style %}
+{% endblock %}
 <style>
 		.sidenav {
 			height:100%;
@@ -93,7 +95,7 @@
   <div id="mysidenav" class="sidenav" >
   		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px;" >&times;</a>
       <br>
-      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+      <center><a href="{% url 'login' %}" style = "font-size :15px; color:gray; "><center><img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
       <br>
       <br>
       <a href="{% url 'aboutus' %}">About us</a>
@@ -102,6 +104,9 @@
   		<a href="#">충전하기</a>
   		<a href="#">Contact</a>
   </div>
+
+  {% block content %}
+  {% endblock %}
 
 </body>
 </html>

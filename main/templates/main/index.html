@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -87,22 +88,22 @@
 	</script>
 
 <br>
-<center><a href="home.html"><img src="logo.png" height = "100" style = "position:relative"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src="menu_open.png" height = "23"></span></center>
+<center><a href="{% url 'index' %}"><img src="{% static 'main/images/logo.png' %}" height = "100" style = "position:relative"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src="{% static 'main/images/menu_open.png' %}" height = "23"></span></center>
 <body>
   <div id="mysidenav" class="sidenav" >
   		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px;" >&times;</a>
       <br>
-      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="profile.png" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
       <br>
       <br>
-      <a href="aboutus.html">About us</a>
+      <a href="{% url 'aboutus' %}">About us</a>
   		<a href="#">이용 방법</a>
-  		<a href="loc&rent.html">킥보드 위치 및 대여</a>
+  		<a href="{% url 'loc_ren' %}">킥보드 위치 및 대여</a>
   		<a href="#">충전하기</a>
   		<a href="#">Contact</a>
   </div>
-
-    <center><img class ="kickboard" src="kickboard.jpg" height = "300px" style = "margin-top:100px;"></center>
-
+  {% block content %}
+    <center><img class ="kickboard" src="{% static 'main/images/kickboard.jpg'%}" height = "300px" style = "margin-top:100px;"></center>
+  {% endblock %}
 </body>
 </html>

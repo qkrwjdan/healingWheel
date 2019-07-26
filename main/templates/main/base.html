@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-{% load static%}
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans|Ubuntu&display=swap" rel="stylesheet">
   <title>Healing Wheel</title>
 </head>
 
@@ -15,7 +16,7 @@
 			z-index:1;
       position:fixed;
 			top: 0;
-			right:0;
+			right :0;
 			background-color: rgb(255,255,255);
 			overflow-x: hidden;
 			transition:0.5s ease-out;
@@ -29,6 +30,7 @@
 			color: #0489B1;
 			display: block;
 			transition: 0.2s ease-in-out;
+      font-family: 'Ubuntu', sans-serif;
 		}
 		.sidenav a:hover, .offcanvas a:focus {
 			color: #000;
@@ -86,21 +88,20 @@
 	</script>
 
 <br>
-<center><a href="{% url 'index' %}"><img src="{% static 'main/images/logo.png' %}" height = "100" style = "position:relative"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src=" {% static 'main/images/menu_open.png' %} " height = "23"></span></center>
+<center><a href="{% url 'index' %}"><img src="{% static 'main/images/logo.png' %}" height = "100" style = "position:relative"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src="{% static 'main/images/menu_open.png' %}" height = "23"></span></center>
 <body>
   <div id="mysidenav" class="sidenav" >
-  		<a href="#" class="closebtn" onclick='closeNav(); '>x</a>
-      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="profile.png" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+  		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px;" >&times;</a>
+      <br>
+      <center><a href="#" style = "font-size :15px; color:gray; "><center><img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+      <br>
       <br>
       <a href="{% url 'aboutus' %}">About us</a>
   		<a href="#">이용 방법</a>
   		<a href="{% url 'loc_ren' %}">킥보드 위치 및 대여</a>
   		<a href="#">충전하기</a>
   		<a href="#">Contact</a>
-  	</div>
-    <br>
-    <br>
-    <center><img src="{% static 'main/images/aboutus.png' %}" height = "500px" ></center>
+  </div>
 
 </body>
 </html>

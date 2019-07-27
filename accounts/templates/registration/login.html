@@ -167,9 +167,9 @@ input.button {
   -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #01A9DB;
-  -webkit-box-shadow: 0 1px #6E6E6E;
-  -moz-box-shadow: 0 1px #6E6E6E;
-  box-shadow: 0 1px #6E6E6E;
+  -webkit-box-shadow:  1px #6E6E6E;
+  -moz-box-shadow:  1px #6E6E6E;
+  box-shadow:  1px #6E6E6E;
   transition: all 0.1s linear 0s;
   top: 0px;
   position: relative;
@@ -187,11 +187,7 @@ a.button:hover {
 {% endblock %}
 
 {% block content%}
-<center>
-  <a href="https://ko-kr.facebook.com/" ><img class= 'sns'  src="{% static 'accounts/images/facebook.png' %}"></a>
-  <a href="https://www.kakaocorp.com/service/KakaoTalk" ><img class= 'sns'  src="{% static 'accounts/images/kakaotalk.png' %}" ></a>
-  <a href="https://www.naver.com/" ><img class= 'sns'  src="{% static 'accounts/images/naver.png' %}" ></a>
-</center>
+
 <div class="testbox">
     <h1>Login</h1>
 
@@ -212,8 +208,11 @@ a.button:hover {
       <p> <a href="#">I forgot ID or Password</a></p>
       <p><a href="{% url 'register' %}">I want to register</a></p>
     </center>
-
-
   </div>
+  <center>
+    <a href="https://ko-kr.facebook.com/" ><img class= 'sns'  src="{% static 'accounts/images/facebook.png' %}"></a>
+    <a href="https://www.kakaocorp.com/service/KakaoTalk" ><img class= 'sns'  src="{% static 'accounts/images/kakaotalk.png' %}" ></a>
+    <a href="https://www.naver.com/" ><img class= 'sns'  src="{% static 'accounts/images/naver.png' %}" ></a>
+  </center>
 
 {% endblock %}

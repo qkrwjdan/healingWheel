@@ -100,7 +100,12 @@
         <center>
           <img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:15px">
         </center>
-        ID </a>
+        {% if user.is_authenticated%}
+        {{user.get_username}}
+        {% else%}
+        ID
+        {% endif %}
+        </a>
 
       </center>
       <br>

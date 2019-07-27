@@ -1,13 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Logout</title>
   </head>
+
+  {% block style %}
+  <style>
+  </style>
+  {% endblock %}
+  {% block content%}
   <body>
-    <div class="">
-      로그아웃 되셨습니다.
-    </div>
-    <a href="{% url 'login' %}">Click to Login</a>
+    <br>
+    <br>
+    <br>
+    <center>
+      <img src="{% static 'main/images/logout.png' %}" height = "100"  alt="">
+      <br>
+      <br>
+      <br>
+      <div class="" style = "font-size :15px; color:gray; font-weight:bold;">
+      로그아웃 되었습니다.
+      </div>
+      <br>
+      <a href="{% url 'login' %}"style = "font-size :15px; color:gray; ">Click to Login</a>
+    </center>
   </body>
+  {% endblock %}
 </html>

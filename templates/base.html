@@ -93,9 +93,16 @@
 <center><a href="{% url 'index' %}"><img src="{% static 'main/images/logo.png' %}" height = "100"></a><span class="openmenu" onclick='openNav(); '  ><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i><img src="{% static 'main/images/menu_open.png' %}" height = "23"></span></center>
 <body>
   <div id="mysidenav" class="sidenav" >
-  		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px;" >&times;</a>
+  		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px; display:inline-block;" >&times;</a>
       <br>
-      <center><a href="{% url 'login' %}" style = "font-size :15px; color:gray; "><center><img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:10px"></center> ID 님</a></center>
+      <center>
+        <a href="{% url 'login' %}" style = "font-size :15px; color:gray; display:inline-block;">
+        <center>
+          <img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:15px">
+        </center>
+        ID </a>
+
+      </center>
       <br>
       <br>
       <a href="{% url 'aboutus' %}">About us</a>
@@ -103,7 +110,7 @@
   		<a href="{% url 'loc_ren' %}">킥보드 위치 및 대여</a>
   		<a href="#">충전하기</a>
   		<a href="#">Contact</a>
-      <a href="{% url 'logout' %}">Logout</a>
+      <a href="{% url 'logout' %}"><img src="{% static 'main/images/logout_icon.png' %}" align="right" style="position:absolute; right:25px; bottom:100px;" height = "15"></a>
   </div>
 
   {% block content %}

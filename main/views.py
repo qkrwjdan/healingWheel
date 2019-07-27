@@ -8,3 +8,12 @@ def aboutus(request):
 
 def loc_ren(request):
     return render(request,'main/loc_ren.html',)
+
+def how_to(request):
+    return render(request,'main/how_to.html')
+
+def contact(request):
+    return render(request,'main/contact.html')
+
+def charge(request):
+    return render(request,'main/charge.html')

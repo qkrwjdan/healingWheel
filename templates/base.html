@@ -96,16 +96,21 @@
   		<a href="#" class="closebtn" onclick='closeNav();' style = "font-size : 25px; padding-top:11px; display:inline-block;" >&times;</a>
       <br>
       <center>
+        {% if user.is_authenticated%}
+        <a href="{% url 'index' %}" style = "font-size :15px; color:gray; display:inline-block;">
+        <center>
+          <img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:15px">
+        </center>
+        {{user.get_username}}
+        </a>
+        {% else%}
         <a href="{% url 'login' %}" style = "font-size :15px; color:gray; display:inline-block;">
         <center>
           <img src="{% static 'main/images/profile.png' %}" height = "25" style = " padding-top:15px">
         </center>
-        {% if user.is_authenticated%}
-        {{user.get_username}}
-        {% else%}
         ID
-        {% endif %}
         </a>
+        {% endif %}
 
       </center>
       <br>

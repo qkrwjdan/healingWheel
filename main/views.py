@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import DrivingTimeForm
 
 def index(request):
     return render(request,'main/index.html',)
@@ -16,4 +17,7 @@ def contact(request):
     return render(request,'main/contact.html')
 
 def charge(request):
-    return render(request,'main/charge.html')
+    form = DrivingTimeForm()
+    return render(request,'main/charge.html',{
+    'form' : form
+    })

@@ -191,16 +191,11 @@
     <h1>Sign-up</h1>
     <hr>
 
-    <form action="/">
+    <form action="/" method = "post">
     <center>
-      <input type="text" name="username" placeholder="username" maxlength="150" required id="id_username">
-      <input type="text" name="first_name" placeholder="first_name" maxlength="30" id="id_first_name">
-      <input type="text" name="last_name" placeholder="last_name" maxlength="150" id="id_last_name">
-      <input type="email" name="email" placeholder="email" maxlength="254" id="id_email">
-      <input type="password" name="password" placeholder="password" required id="id_password">
-      <input type="hidden" name="csrfmiddlewaretoken" value="GohF9ZrZUL7b5UbbjMjSXWasMcRv90bDUy7qdaNNFTW9CnFpQKrY2K51HbFmWIUt">
-      <input type="submit" class="button" name="" value="Signup">
-      {% csrf_token %}
+      {{ form.as_p}}
+      {% csrf_token%}
+      <input type="submit" name="" value="register">
     </center>
 
     <center>

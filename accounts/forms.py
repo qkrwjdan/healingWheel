@@ -4,7 +4,7 @@ from django import forms
 class RegisterForm(forms.ModelForm):
     # PasswordInput이라는 input태그를 사용하려고 password는 클래스 변수로 선언
     password = forms.CharField(label='password',widget = forms.PasswordInput)
-    password = forms.CharField(label='Repeat password',widget = forms.PasswordInput)
+    password2 = forms.CharField(label='Repeat password',widget = forms.PasswordInput)
 
     #Meta 클래스를 이용하여 기존에 있는 모델의 입력 폼을 쉽게 작성 가능
     #model 을 설정, fields를 이용해서 입력받을 필드들을 지정하면 된다.

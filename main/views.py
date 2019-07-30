@@ -17,7 +17,7 @@ def contact(request):
     return render(request,'main/contact.html')
 
 def charge(request):
-    if request.method == 'POST:
+    if request.method == 'POST':
         form = DrivingTimeForm()
 
 

@@ -5,6 +5,9 @@
 
 {% block content%}
 charge
-{{form.as_p}}
-{% csrf_token %}
+<form class="" method="post">
+  {{form.as_p}}
+  {% csrf_token %}
+  <input type="submit" name="" value="charge">
+</form>
 {% endblock %}

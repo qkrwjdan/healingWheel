@@ -26,8 +26,8 @@ class DrivingTime(models.Model):
 
     VOUCHER_CHOICES = [
         (MENU_1,'10분'),
-        (MENU_2,'20분'),
-        (MENU_3,'30분'),
+        (MENU_2,'30분'),
+        (MENU_3,'60분'),
     ]
     detail_menu = models.CharField(
         max_length = 10,

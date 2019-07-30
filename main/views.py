@@ -19,7 +19,15 @@ def contact(request):
 def charge(request):
     if request.method == 'POST':
         form = DrivingTimeForm()
-
+        if form.is_valid():
+            if request.POST['detail_menu'] == '10':
+                return render(request,'main/index.html')
+            elif request.POST['detail_menu'] == '30':
+                return render(request,'main/index.html')
+            else:
+                return render(request,'main/index.html')
+    else:
+        form = DrivingTimeForm()
 
     return render(request,'main/charge.html',{
     'form' : form

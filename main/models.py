@@ -18,6 +18,9 @@ class Profile(models.Model):
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
+    def __str__(self):
+        return self.user.username
+
 
 class DrivingTime(models.Model):
     MENU_1 = '10'

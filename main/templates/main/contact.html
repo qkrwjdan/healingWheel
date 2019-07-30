@@ -1,8 +1,19 @@
 {% extends 'base.html'%}
-
+{% load static %}
 {% block style%}
+
 {% endblock%}
 
 {% block content %}
-010-8910-1768
+<link href="https://fonts.googleapis.com/css?family=DM+Sans|Ubuntu&display=swap" rel="stylesheet">
+
+<center>
+<br>
+<img src="{% static 'main/images/information.jpg' %}" height = "375px">
+<img src="{% static 'main/images/information(2).jpg' %}" height = "300px">
+<br>
+<p style = "font-family: 'Ubuntu', sans-serif; font-size : 15px; font-weigth:bold; color:gray;"><img src="{% static 'main/images/call.png' %}" height="12px" >고객센터 : 010-8910-1768</p>
+
+</center>
+
 {% endblock %}

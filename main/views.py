@@ -32,3 +32,6 @@ def charge(request):
     return render(request,'main/charge.html',{
     'form' : form
     })
+
+def profile(request):
+    return render(request,'main/profile.html')

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import DrivingTimeForm
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request,'main/index.html',)
@@ -16,6 +17,7 @@ def how_to(request):
 def contact(request):
     return render(request,'main/contact.html')
 
+@login_required
 def charge(request):
     if request.method == 'POST':
         form = DrivingTimeForm()

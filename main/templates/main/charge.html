@@ -91,16 +91,17 @@ hr{
 <br>
 <center>
   <div class ="charge" style="padding-top : 20px">충전하기
-    <form class="" method="post">
-      <hr>
-      <label for="id_detail_menu" style="font-size : 17px;"> - 시간 선택 -</label><br><select name="detail_menu" class="id_detail_menu">
-      <option value="10" selected>10분</option>
-      <option value="30">30분</option>
-      <option value="60">60분</option>
+    <form action='' method='post'>
+    <hr>
+    <label for="id_detail_menu" style="font-size : 17px;"> - 시간 선택 -</label><br><select name="detail_menu" class="id_detail_menu">
+    <option value="10" selected>10분</option>
+    <option value="30">30분</option>
+    <option value="60">60분</option>
     </select>
     <br>
-          <input type='hidden' name='csrfmiddlewaretoken' value='UCcnCBxOk2uTwIAe97cLNWJ7rrxXrUtTzOYhLavk4nvSUvA526wWMLNBIXwWqjPu' />
-          <input class = "charge_button" type="submit" name="" value="charge" style=" margin-top : 30px; margin-botttom : 10px;">
+     <input type='hidden' name='csrfmiddlewaretoken' value='UCcnCBxOk2uTwIAe97cLNWJ7rrxXrUtTzOYhLavk4nvSUvA526wWMLNBIXwWqjPu' />
+     {% csrf_token %}
+     <input class = "charge_button" type="submit" name="" value="charge" style=" margin-top : 30px; margin-botttom : 10px;">
     </form>
   </div>
 </center>

@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import DrivingTimeForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from datetime import timedelta
 
 def index(request):
     return render(request,'main/index.html',)
@@ -20,20 +22,23 @@ def contact(request):
 @login_required
 def charge(request):
     if request.method == 'POST':
-        form = DrivingTimeForm()
-        if form.is_valid():
-            if request.POST['detail_menu'] == '10':
-                return render(request,'main/index.html')
-            elif request.POST['detail_menu'] == '30':
-                return render(request,'main/index.html')
-            else:
-                return render(request,'main/index.html')
-    else:
-        form = DrivingTimeForm()
+        us = request.user
+        profile = us.profile
+        if request.POST['detail_menu'] == '10':
+            profile.duration += timedelta(minutes = 10)
+        elif request.POST['detail_menu'] == '30':
+            profile.duration += timedelta(minutes = 30)
+        else:
+            profile.duration += timedelta(minutes = 60)
+        profile.save()
+        return redirect('profile')
 
     return render(request,'main/charge.html',{
-    'form' : form
     })
 
+@login_required
 def profile(request):
-    return render(request,'main/profile.html')
+    us = request.user
+    return render(request,'main/profile.html',{
+    'user' : us
+    })

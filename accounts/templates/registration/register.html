@@ -193,25 +193,10 @@
 
     <form method = "post">
     <center>
-<<<<<<< HEAD
-      <p><label for="id_username">Username</label> <input type="text" name="username" maxlength="150" required id="id_username" /> <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></p>
-      <br>
-      <br>
-      <p><label for="id_first_name">First name</label> <input type="text" name="first_name" maxlength="30" id="id_first_name" /></p>
-      <p><label for="id_last_name">Last name</label> <input type="text" name="last_name" maxlength="150" id="id_last_name" /></p>
-      <p><label for="id_email">Email address</label> <input type="email" name="email" maxlength="254" id="id_email" /></p>
-      <p><label for="id_password">password</label> <input type="password" name="password" required id="id_password" /></p>
-      <p><label for="id_password2">Repeat password</label> <input type="password" name="password2" required id="id_password2" /></p>
-
-      <input type='hidden' name='csrfmiddlewaretoken' value='WgTKCHboBYoAsngzBUArJMc9jytGIqqtiwgHpSBWuKYPNHDWPzvyLa6n8GOJVyGm' />
-      <input type="submit" class="button" name="" value="Register">
-      {% csrf_token%}
-=======
       {{form.as_p}}
       {% csrf_token%}
       <input type="submit" class='button' name="" value="register">
 
->>>>>>> c39b59029b1629127f261246576b0d77af183f74
     </center>
     <center>
       <p style = "font-size:8px;">By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>

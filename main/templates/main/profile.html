@@ -1,12 +1,38 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block style %}
+<style>
+  .charge {
+    font-size:30px;
+    font-weight:bold;
+    color : gray;
+    margin: 20px auto;
+    width: 343px;
+    -webkit-border-radius: 8px/7px;
+    -moz-border-radius: 8px/7px;
+    border-radius: 8px/7px;
+    background-color: rgba(0,0,0,.03);
+    -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.11);
+    -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.11);
+    box-shadow: 1px 2px 5px rgba(0,0,0,.11);
+    border: solid 1px #cbc9c9;
+    font-family: 'Ubuntu', sans-serif;
+  }
+</style>
 {% endblock %}
 
 {% block content%}
 <center>
-<h1>profile</h1>
-<h3>{{ user.username }}</h3><br>
-<h3>{{ user.profile.duration }}</h3><br>
+  <br>
+  <br>
+  <br>
+  <div class ="charge" style="padding-top : 50px">
+    <img src="{% static 'main/images/profile.png' %}" height = "60">
+    <h3 style = " font-size: 25px; color : black;">{{ user.username }}</h3>
+    <h3 style = " padding-top : 5px; font-size: 20px">남은시간</h3>
+    <h3 style = "font-size: 20px"> <br>{{ user.profile.duration }} <a href="{% url 'charge'%}"><img src="{% static 'main/images/plus.png' %}" height = "15"></a></h3><br>
+  </div>
+
+
 </center>
 {% endblock %}
